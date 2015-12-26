@@ -1,18 +1,18 @@
 {
     "name": "lelivrescolaire/payment-sips-bundle",
     "type": "symfony-bundle",
-    "description": "Payment Bundle providing access to the ATOS SIPS solution",
+    "description": "Payment Bundle providing access to the ATOS SIPS solution (subscription plugin)",
     "keywords": ["payment", "atos", "sips", "mercanet", "cyberplus", "elysnet", "scellius","sogenactif", "webaffaires", "sherlocks", "citelis", "accord"],
-    "homepage": "http://github.com/KptiveStudio/KptivePaymentSipsBundle",
+    "homepage": "http://github.com/Lelivrescolaire/KptivePaymentSipsBundle",
     "license": "MIT",
     "authors": [
         {
-            "name":     "KptiveStudio",
-            "homepage": "http://kptivestudio.com"
+            "name":     "Lelivrescolaire",
+            "homepage": "http://www.lelivrescolaire.fr"
         },
         {
-            "name": "Hubert Moutot",
-            "email": "hubert.moutot@gmail.com"
+            "name": "Jonathan Banon",
+            "email": "jonathan.banon@lelivrescolaire.fr"
         }
     ],
     "require": {

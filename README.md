@@ -4,8 +4,10 @@ KptivePaymentSipsBundle
 [![Build Status](https://secure.travis-ci.org/KptiveStudio/KptivePaymentSipsBundle.png?branch=master)](http://travis-ci.org/KptiveStudio/KptivePaymentSipsBundle)
 
 
-The `KptivePaymentSipsBundle` provides access to the Atos Worldline SIPS payment solution through
+The `LelivrescolairePaymentSipsBundle` provides access to the Atos Worldline SIPS payment solution (subscription plugin) through
 the [JMSPaymentCoreBundle](https://github.com/schmittjoh/JMSPaymentCoreBundle).
+
+Thanks to `KptivePaymentSipsBundle` to have done almost all the work. This bundle is aimed to be merge with the original `KptivePaymentSipsBundle`
 
 The following payment services are powered by Atos SIPS:
 - Merc@net (BNP Parisbas)
