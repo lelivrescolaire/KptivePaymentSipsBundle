@@ -169,4 +169,70 @@ class Client
         return $result;
     }
 
+    /**
+     * Handle response for subscription process
+     * @param  string $data the raw response
+     * @return array
+     */
+    public function handleSubResponseData($data)
+    {
+        $args = array(
+            'message' => $data,
+            'pathfile' => $this->config['pathfile'],
+        );
+
+        $output = $this->run($this->binaries['response_bin'], $this->arrayToArgsString($args));
+
+
+        list(
+            $result['code'],
+            $result['error'],
+            $result['merchant_id'],
+            $result['transaction_id'],
+            $result['transmission_date'],
+            $result['sub_time'],
+            $result['sub_date'],
+            $result['response_code'],
+            $result['bank_response_code'],
+            $result['cvv_response_code'],
+            $result['cvv_flag'],
+            $result['complementary_code'],
+            $result['complementary_info'],
+            $result['sub_payment_mean'],
+            $result['card_number'],
+            $result['card_validity'],
+            $result['payment_certificate'],
+            $result['authorisation_id'],
+            $result['currency_code'],
+            $result['sub_type'],
+            $result['sub_amount'],
+            $result['capture_day'],
+            $result['capture_mode'],
+            $result['merchant_language'],
+            $result['merchant_country'],
+            $result['language'],
+            $result['receipt_complement'],
+            $result['caddie'],
+            $result['data'],
+            $result['return_context'],
+            $result['customer_ip_address'],
+            $result['order_id'],
+            $result['sub_operation_code'],
+            $result['sub_subscriber_id'],
+            $result['sub_civil_status'],
+            $result['sub_lastname'],
+            $result['sub_firstname'],
+            $result['sub_address1'],
+            $result['sub_address2'],
+            $result['sub_zipcode'],
+            $result['sub_city'],
+            $result['sub_country'],
+            $result['sub_telephone'],
+            $result['sub_email'],
+            $result['sub_description']
+        ) = array_merge(explode('!', trim($output, '!')), array_fill(0, 40, ''));
+
+        return $result;
+    }
+
 }
