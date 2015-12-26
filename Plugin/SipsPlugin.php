@@ -58,7 +58,7 @@ class SipsPlugin extends AbstractPlugin
             $transaction->setResponseCode(PluginInterface::RESPONSE_CODE_SUCCESS);
             $transaction->setReasonCode(PluginInterface::REASON_CODE_SUCCESS);
 
-            $transaction->setProcessedAmount($data->get('amount') / 100);
+            $transaction->setProcessedAmount($data->get('sub_amount') / 100);
         }
     }
 
